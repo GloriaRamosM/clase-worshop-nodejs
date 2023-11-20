@@ -1,40 +1,28 @@
-<!DOCTYPE html>
-<html lang="es">
+<main>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <h1> Tarea</h1>
+    <h2> Crear Tarea</h2>
 
-    <link rel="stylesheet" href="/stylesheet/style.css">
-</head>
+    <form action="/" method="post">
+        <div>
+            <label for="title"> Nombre: </label>
+            <input type="text" name="title" id="title" />
+        </div>
 
-<body>
+        <button type="submit">Enviar</button>
+    </form>
 
-    <header> MENU </header>
-    <main>
+    <h2> Listado de tareas</h2>
+    <ul>
+        <!-- La tarea que vamos a hacer dinamicas-->
 
-        <h1> Tarea</h1>
-        <h2> Crear Tarea</h2>
+        <% tareas.forEach(tarea=> { %>
+            <li>
+                <%= tarea.title %>
+            </li>
+            <% }) %>
 
-        <form action="/" method="post">
-            <div>
-                <label for="title"> Nombre: </label>
-                <input type="text" name="title" id="title" />
-            </div>
+    </ul>
 
-            <button type="submit">Enviar</button>
-        </form>
 
-        <h2> Listado de tareas</h2>
-
-    </main>
-
-    <footer>
-        <small> CopyRight 2023 </small>
-    </footer>
-
-    <script src="/javascript/index.js"></script>
-</body>
-
-</html>
+</main>
